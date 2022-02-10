@@ -4,11 +4,20 @@
 
 
 pagesWritten = {str : int}
+wordsWritten = {str : int}
 
 pagesWritten = {
+        "11.11" : 4,
         "2.8" : 7,
-        "2.9" : 8
-        }   
+        "2.9" : 8,
+        } 
+pagesInEachStory = {
+    "Nikki" : 10,
+    "James" : 4,
+    "Christiana" : 2,
+    "Khana" : 4
+}
+
 
 def askUser(day, number):
     number = int(number)
@@ -20,12 +29,17 @@ def addDay(pagesWritten, day, number):
 
 
 #how many days did you write
-def howManyDays(pagesWritten):
-    print(len(pagesWritten))
+def howManyDays(pagesWritten, pagesInEachStory):
+    print("You wrote for: ")
+    print(len(pagesWritten), " days")
+    print("in each story, you wrote: ")
+    print(pagesInEachStory)
+        
+
 
 def main():
    print("You've written: ")
-   howManyDays(pagesWritten) 
+   howManyDays(pagesWritten, pagesInEachStory) 
    day = input("Enter the date as a decimal number" )
    number = input("Enter the number of pages you wrote: ")
    addDay(pagesWritten, day, number)
